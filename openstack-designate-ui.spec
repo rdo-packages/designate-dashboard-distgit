@@ -8,8 +8,8 @@
 OpenStack Designate Horizon plugin
 
 Name:       openstack-%{library}
-Version:    XXX
-Release:    XXX
+Version:    5.0.1
+Release:    1%{?dist}
 Summary:    OpenStack Designate UI Horizon plugin
 License:    ASL 2.0
 URL:        http://launchpad.net/%{upstream_name}/
@@ -25,9 +25,9 @@ BuildRequires:  git
 
 Requires:   python2-pbr
 Requires:   python2-babel
-Requires:   python2-designateclient >= 2.7.0
+Requires:   python2-designateclient >= 1.5.0
 Requires:   openstack-dashboard >= 1:8.0.0
-Requires:   python2-oslo-log >= 3.36.0
+Requires:   python2-oslo-log >= 3.22.0
 
 %description
 %{common_desc}
@@ -35,9 +35,10 @@ Requires:   python2-oslo-log >= 3.36.0
 %package -n python-%{library}-doc
 Summary:    OpenStack example library documentation
 
-BuildRequires: python2-sphinx
-BuildRequires: python2-django
-BuildRequires: python2-django-nose
+BuildRequires: python-sphinx
+BuildRequires: python-django
+BuildRequires: python2-django-openstack-auth >= 3.5.0
+BuildRequires: python-django-nose
 BuildRequires: python-django-compressor
 BuildRequires: openstack-dashboard
 BuildRequires: python2-openstackdocstheme
@@ -88,3 +89,5 @@ install -p -D -m 640 %{module}/enabled/_1722_dns_reversedns_panel.py %{buildroot
 
 
 %changelog
+* Thu Mar 26 2018 RDO <dev@lists.rdoproject.org> 5.0.1
+- Update to 5.0.1
