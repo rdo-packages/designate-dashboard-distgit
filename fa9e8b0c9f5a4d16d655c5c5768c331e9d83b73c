@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1ab14d0d_a2f54684",
+        "filename": "openstack-designate-ui.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2018-03-29T09:58:53Z",
+      "side": 1,
+      "message": "This is not Pike:\n           Requires: python2-oslo-log \u003e\u003d 3.36.0\n           Available: python2-oslo-log-3.30.2-1.el7.noarch (validated)",
+      "revId": "fa9e8b0c9f5a4d16d655c5c5768c331e9d83b73c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
