@@ -26,7 +26,7 @@ BuildRequires:  git
 Requires:   python2-pbr
 Requires:   python2-babel
 Requires:   python2-designateclient >= 2.7.0
-Requires:   openstack-dashboard >= 1:8.0.0
+Requires:   openstack-dashboard >= 1:14.0.0.0b2
 Requires:   python2-oslo-log >= 3.36.0
 
 %description
