@@ -1,3 +1,14 @@
+# Macros for py2/py3 compatibility
+%if 0%{?fedora} || 0%{?rhel} > 7
+%global pyver %{python3_pkgversion}
+%else
+%global pyver 2
+%endif
+%global pyver_bin python%{pyver}
+%global pyver_sitelib %python%{pyver}_sitelib
+%global pyver_install %py%{pyver}_install
+%global pyver_build %py%{pyver}_build
+# End of macros for py2/py3 compatibility
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 %global library designate-ui
@@ -18,35 +29,36 @@ Source0:    https://tarballs.openstack.org/%{upstream_name}/%{upstream_name}-%{u
 
 BuildArch:  noarch
 
-BuildRequires:  python2-devel
-BuildRequires:  python2-pbr
-BuildRequires:  python2-setuptools
+BuildRequires:  python%{pyver}-devel
+BuildRequires:  python%{pyver}-pbr
+BuildRequires:  python%{pyver}-setuptools
 BuildRequires:  git
 
-Requires:   python2-pbr
-Requires:   python2-babel
-Requires:   python2-designateclient >= 2.7.0
+Requires:   python%{pyver}-pbr
+Requires:   python%{pyver}-babel
+Requires:   python%{pyver}-designateclient >= 2.7.0
 Requires:   openstack-dashboard >= 1:14.0.0
-Requires:   python2-oslo-log >= 3.36.0
+Requires:   python%{pyver}-oslo-log >= 3.36.0
 
 %description
 %{common_desc}
 
-%package -n python-%{library}-doc
+%package -n python%{pyver}-%{library}-doc
 Summary:    OpenStack example library documentation
+%{?python_provide:%python_provide python%{pyver}-%{library}-doc}
 
-BuildRequires: python2-sphinx
-BuildRequires: python2-django
-BuildRequires: python2-django-nose
-BuildRequires: python-django-compressor
+BuildRequires: python%{pyver}-sphinx
+BuildRequires: python%{pyver}-django
+BuildRequires: python%{pyver}-django-nose
+BuildRequires: python%{pyver}-django-compressor
 BuildRequires: openstack-dashboard
-BuildRequires: python2-openstackdocstheme
-BuildRequires: python2-designateclient
-BuildRequires: python2-mock
+BuildRequires: python%{pyver}-openstackdocstheme
+BuildRequires: python%{pyver}-designateclient
+BuildRequires: python%{pyver}-mock
 BuildRequires: openstack-macros
-BuildRequires: python2-oslo-config
+BuildRequires: python%{pyver}-oslo-config
 
-%description -n python-%{library}-doc
+%description -n python%{pyver}-%{library}-doc
 %{common_desc}
 
 This package contains the documentation.
@@ -58,16 +70,16 @@ This package contains the documentation.
 
 
 %build
-%py2_build
+%{pyver_build}
 
 # generate html docs
 export PYTHONPATH=/usr/share/openstack-dashboard
-%{__python2} setup.py build_sphinx -b html
-# remove the sphinx-build leftovers
+%{pyver_bin} setup.py build_sphinx -b html
+# remove the sphinx-build-%{pyver} leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
 
 %install
-%py2_install
+%{pyver_install}
 
 # Move config to horizon
 install -p -D -m 640 %{module}/enabled/_1710_project_dns_panel_group.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1710_project_dns_panel_group.py
@@ -78,11 +90,11 @@ install -p -D -m 640 %{module}/enabled/_1722_dns_reversedns_panel.py %{buildroot
 
 %files
 %license LICENSE
-%{python2_sitelib}/%{module}
-%{python2_sitelib}/*.egg-info
+%{pyver_sitelib}/%{module}
+%{pyver_sitelib}/*.egg-info
 %{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_17*
 
-%files -n python-%{library}-doc
+%files -n python%{pyver}-%{library}-doc
 %license LICENSE
 %doc doc/build/html README.rst
 
