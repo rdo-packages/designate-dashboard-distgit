@@ -48,7 +48,6 @@ Summary:    OpenStack example library documentation
 
 BuildRequires: python%{pyver}-sphinx
 BuildRequires: python%{pyver}-django
-BuildRequires: python%{pyver}-django-nose
 BuildRequires: python%{pyver}-django-compressor
 BuildRequires: openstack-dashboard
 BuildRequires: python%{pyver}-openstackdocstheme
