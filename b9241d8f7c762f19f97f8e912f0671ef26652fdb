@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "78c7183a_270bae40",
+        "filename": "openstack-designate-ui.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2019-08-07T15:47:43Z",
+      "side": 1,
+      "message": "openstack-macros BR should be out of the conditional as it\u0027s always required to provide py_req_cleanup at least.",
+      "range": {
+        "startLine": 58,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 31
+      },
+      "revId": "b9241d8f7c762f19f97f8e912f0671ef26652fdb",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
