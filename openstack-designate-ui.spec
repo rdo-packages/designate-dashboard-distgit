@@ -14,6 +14,7 @@
 %global library designate-ui
 %global module designatedashboard
 %global upstream_name designate-dashboard
+%global with_doc 1
 
 %global common_desc \
 OpenStack Designate Horizon plugin
@@ -43,23 +44,18 @@ Requires:   python%{pyver}-oslo-log >= 3.36.0
 %description
 %{common_desc}
 
+%if 0%{?with_doc}
 %package -n python-%{library}-doc
 Summary:    OpenStack example library documentation
 
-BuildRequires: python%{pyver}-sphinx
-BuildRequires: python%{pyver}-django
-BuildRequires: python%{pyver}-django-compressor
-BuildRequires: openstack-dashboard
 BuildRequires: python%{pyver}-openstackdocstheme
-BuildRequires: python%{pyver}-designateclient
-BuildRequires: python%{pyver}-mock
-BuildRequires: openstack-macros
-BuildRequires: python%{pyver}-oslo-config
+BuildRequires: python%{pyver}-sphinx
 
 %description -n python-%{library}-doc
 %{common_desc}
 
 This package contains the documentation.
+%endif
 
 %prep
 %autosetup -n %{upstream_name}-%{upstream_version} -S git
@@ -70,11 +66,13 @@ This package contains the documentation.
 %build
 %{pyver_build}
 
+%if 0%{?with_doc}
 # generate html docs
 export PYTHONPATH=/usr/share/openstack-dashboard
 %{pyver_bin} setup.py build_sphinx -b html
 # remove the sphinx-build-%{pyver} leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
+%endif
 
 %install
 %{pyver_install}
@@ -92,9 +90,11 @@ install -p -D -m 640 %{module}/enabled/_1722_dns_reversedns_panel.py %{buildroot
 %{pyver_sitelib}/*.egg-info
 %{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_17*
 
+%if 0%{?with_doc}
 %files -n python-%{library}-doc
 %license LICENSE
 %doc doc/build/html README.rst
+%endif
 
 
 %changelog
