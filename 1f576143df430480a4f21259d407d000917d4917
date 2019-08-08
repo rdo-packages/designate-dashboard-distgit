@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba21ae79_8b739f07",
+        "filename": "openstack-designate-ui.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2019-08-08T09:21:04Z",
+      "side": 0,
+      "message": "You need to keep openstack-macros. It is a package that provides some spec macros used in this spec file, mainly py_req_cleanup.\n\nYou can see https://github.com/openstack/rpm-packaging/blob/master/openstack/openstack-macros/macros.openstack-rdo",
+      "range": {
+        "startLine": 56,
+        "startChar": 15,
+        "endLine": 56,
+        "endChar": 31
+      },
+      "revId": "1f576143df430480a4f21259d407d000917d4917",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
