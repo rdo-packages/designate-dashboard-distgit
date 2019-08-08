@@ -22,6 +22,30 @@
       "revId": "b9241d8f7c762f19f97f8e912f0671ef26652fdb",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a173d608_10342309",
+        "filename": "openstack-designate-ui.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2019-08-08T07:32:32Z",
+      "side": 1,
+      "message": "After checking the upstream code, I removed all BRs except openstackdocstheme and sphinx.\nSee Patch Set 2",
+      "parentUuid": "78c7183a_270bae40",
+      "range": {
+        "startLine": 58,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 31
+      },
+      "revId": "b9241d8f7c762f19f97f8e912f0671ef26652fdb",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
