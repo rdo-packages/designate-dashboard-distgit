@@ -1,3 +1,4 @@
+%global milestone .0rc1
 # Macros for py2/py3 compatibility
 %if 0%{?fedora} || 0%{?rhel} > 7
 %global pyver %{python3_pkgversion}
@@ -20,13 +21,17 @@
 OpenStack Designate Horizon plugin
 
 Name:       openstack-%{library}
-Version:    XXX
-Release:    XXX
+Version:    9.0.0
+Release:    0.1%{?milestone}%{?dist}
 Summary:    OpenStack Designate UI Horizon plugin
 License:    ASL 2.0
 URL:        http://launchpad.net/%{upstream_name}/
 
 Source0:    https://tarballs.openstack.org/%{upstream_name}/%{upstream_name}-%{upstream_version}.tar.gz
+
+#
+# patches_base=9.0.0.0rc1
+#
 
 BuildArch:  noarch
 
@@ -98,3 +103,6 @@ install -p -D -m 640 %{module}/enabled/_1722_dns_reversedns_panel.py %{buildroot
 
 
 %changelog
+* Mon Sep 30 2019 RDO <dev@lists.rdoproject.org> 9.0.0-0.1.0rc1
+- Update to 9.0.0.0rc1
+
