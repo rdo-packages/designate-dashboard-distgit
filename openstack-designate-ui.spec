@@ -51,6 +51,7 @@ Summary:    OpenStack example library documentation
 
 BuildRequires: python%{pyver}-openstackdocstheme
 BuildRequires: python%{pyver}-sphinx
+BuildRequires: python%{pyver}-sphinxcontrib-rsvgconverter
 
 %description -n python-%{library}-doc
 %{common_desc}
