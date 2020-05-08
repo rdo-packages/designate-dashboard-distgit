@@ -60,7 +60,7 @@ This package contains the documentation.
 %if 0%{?with_doc}
 # generate html docs
 export PYTHONPATH=/usr/share/openstack-dashboard
-%{__python3} setup.py build_sphinx -b html
+sphinx-build -W -b html doc/source doc/build/html
 # remove the sphinx-build leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
