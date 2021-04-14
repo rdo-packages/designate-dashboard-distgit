@@ -1,4 +1,3 @@
-%global milestone .0rc1
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
 %global sources_gpg_sign 0x5d2d1e4fb8d38e6af76c50d53d4fec30cf5ce3da
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
@@ -13,14 +12,12 @@ OpenStack Designate Horizon plugin
 
 Name:       openstack-%{library}
 Version:    12.0.0
-Release:    0.1%{?milestone}%{?dist}
+Release:    1%{?dist}
 Summary:    OpenStack Designate UI Horizon plugin
 License:    ASL 2.0
 URL:        http://launchpad.net/%{upstream_name}/
 
 Source0:    https://tarballs.openstack.org/%{upstream_name}/%{upstream_name}-%{upstream_version}.tar.gz
-#
-# patches_base=12.0.0.0rc1
 #
 
 # Required for tarball sources verification
@@ -108,6 +105,9 @@ install -p -D -m 640 %{module}/enabled/_1722_dns_reversedns_panel.py %{buildroot
 
 
 %changelog
+* Wed Apr 14 2021 RDO <dev@lists.rdoproject.org> 12.0.0-1
+- Update to 12.0.0
+
 * Thu Mar 25 2021 RDO <dev@lists.rdoproject.org> 12.0.0-0.1.0rc1
 - Update to 12.0.0.0rc1
 
