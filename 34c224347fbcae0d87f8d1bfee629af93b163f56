@@ -1,0 +1,10 @@
+Code-Review+1: Deepanshu Bhatia <deep23bhatia@gmail.com>
+Code-Review+2: Yatin Karel <ykarel@redhat.com>
+Code-Review+2: Alfredo Moralejo <amoralej@redhat.com>
+Workflow+1: Alfredo Moralejo <amoralej@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Thu, 15 Apr 2021 12:43:47 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/designate-dashboard-distgit/+/33361
+Project: openstack/designate-dashboard-distgit
+Branch: refs/heads/train-rdo
