@@ -20,7 +20,7 @@
 OpenStack Designate Horizon plugin
 
 Name:       openstack-%{library}
-Version:    9.0.0
+Version:    9.0.1
 Release:    1%{?dist}
 Summary:    OpenStack Designate UI Horizon plugin
 License:    ASL 2.0
@@ -100,6 +100,9 @@ install -p -D -m 640 %{module}/enabled/_1722_dns_reversedns_panel.py %{buildroot
 
 
 %changelog
+* Thu Apr 15 2021 Tobias Urdin <tobias.urdin@binero.com> 9.0.1-1
+- Update to 9.0.1
+
 * Wed Oct 16 2019 RDO <dev@lists.rdoproject.org> 9.0.0-1
 - Update to 9.0.0
 
