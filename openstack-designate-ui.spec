@@ -103,3 +103,4 @@ install -p -D -m 640 %{module}/enabled/_1722_dns_reversedns_panel.py %{buildroot
 
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/designate-dashboard/commit/2400f6de26895873cdea42b7276382a1b6e4ed6f
