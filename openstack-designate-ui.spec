@@ -21,7 +21,7 @@ OpenStack Designate Horizon plugin
 
 Name:       openstack-%{library}
 Version:    9.0.1
-Release:    1%{?dist}
+Release:    2%{?dist}
 Summary:    OpenStack Designate UI Horizon plugin
 License:    ASL 2.0
 URL:        http://launchpad.net/%{upstream_name}/
@@ -81,9 +81,9 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %{pyver_install}
 
 # Move config to horizon
-install -p -D -m 640 %{module}/enabled/_1710_project_dns_panel_group.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1710_project_dns_panel_group.py
-install -p -D -m 640 %{module}/enabled/_1721_dns_zones_panel.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1721_dns_zones_panel.py
-install -p -D -m 640 %{module}/enabled/_1722_dns_reversedns_panel.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1722_dns_reversedns_panel.py
+install -p -D -m 644 %{module}/enabled/_1710_project_dns_panel_group.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1710_project_dns_panel_group.py
+install -p -D -m 644 %{module}/enabled/_1721_dns_zones_panel.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1721_dns_zones_panel.py
+install -p -D -m 644 %{module}/enabled/_1722_dns_reversedns_panel.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1722_dns_reversedns_panel.py
 
 
 %files
@@ -100,6 +100,9 @@ install -p -D -m 640 %{module}/enabled/_1722_dns_reversedns_panel.py %{buildroot
 
 
 %changelog
+* Wed Nov 10 2021 Tobias Urdin <tobias.urdin@binero.com> 9.0.1-2
+- Fix Horizon enabled files permission
+
 * Thu Apr 15 2021 Tobias Urdin <tobias.urdin@binero.com> 9.0.1-1
 - Update to 9.0.1
 
