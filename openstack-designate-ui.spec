@@ -38,9 +38,7 @@ BuildRequires:  git-core
 BuildRequires:  openstack-macros
 
 Requires:   python3-pbr
-Requires:   python3-designateclient >= 2.7.0
 Requires:   openstack-dashboard >= 1:17.1.0
-Requires:   python3-oslo-log >= 3.36.0
 
 %description
 %{common_desc}
