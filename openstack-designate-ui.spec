@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x4c29ff0e437f3351fd82bdf47c5a3bc787dc7035
+%global sources_gpg_sign 0xa7475c5f2122fec3f90343223fe3bf5aad1080e4
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 %global library designate-ui
@@ -11,8 +11,8 @@
 OpenStack Designate Horizon plugin
 
 Name:       openstack-%{library}
-Version:    13.0.0
-Release:    2%{?dist}
+Version:    13.0.1
+Release:    1%{?dist}
 Summary:    OpenStack Designate UI Horizon plugin
 License:    ASL 2.0
 URL:        http://launchpad.net/%{upstream_name}/
@@ -105,6 +105,9 @@ install -p -D -m 644 %{module}/enabled/_1722_dns_reversedns_panel.py %{buildroot
 
 
 %changelog
+* Wed Jan 18 2023 RDO <dev@lists.rdoproject.org> 13.0.1-1
+- Update to 13.0.1
+
 * Wed Nov 10 2021 Tobias Urdin <tobias.urdin@binero.com> 13.0.0-2
 - Fix Horizon enabled files permissions
 
