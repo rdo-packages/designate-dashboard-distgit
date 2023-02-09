@@ -112,3 +112,4 @@ install -p -D -m 644 %{module}/enabled/_1722_dns_reversedns_panel.py %{buildroot
 * Mon Sep 30 2019 RDO <dev@lists.rdoproject.org> 9.0.0-0.1.0rc1
 - Update to 9.0.0.0rc1
 
+# REMOVEME: error caused by commit https://opendev.org/openstack/designate-dashboard/commit/9d15e3f4a3ccb6cc4f5961366b19ea47495c27f3
