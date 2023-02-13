@@ -53,6 +53,7 @@ Summary:    OpenStack example library documentation
 
 BuildRequires: python%{pyver}-openstackdocstheme
 BuildRequires: python%{pyver}-sphinx
+BuildRequires: python%{pyver}-sphinxcontrib-rsvgconverter
 
 %description -n python-%{library}-doc
 %{common_desc}
@@ -74,7 +75,7 @@ This package contains the documentation.
 export PYTHONPATH=/usr/share/openstack-dashboard
 %{pyver_bin} setup.py build_sphinx -b html
 # remove the sphinx-build-%{pyver} leftovers
-rm -rf doc/build/html/.{doctrees,buildinfo}
+rm -rf build/sphinx/html/.{doctrees,buildinfo}
 %endif
 
 %install
@@ -95,7 +96,7 @@ install -p -D -m 644 %{module}/enabled/_1722_dns_reversedns_panel.py %{buildroot
 %if 0%{?with_doc}
 %files -n python-%{library}-doc
 %license LICENSE
-%doc doc/build/html README.rst
+%doc build/sphinx/html README.rst
 %endif
 
 
