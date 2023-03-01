@@ -75,7 +75,7 @@ This package contains the documentation.
 export PYTHONPATH=/usr/share/openstack-dashboard
 %{pyver_bin} setup.py build_sphinx -b html
 # remove the sphinx-build-%{pyver} leftovers
-rm -rf build/sphinx/html/.{doctrees,buildinfo}
+rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %install
@@ -96,7 +96,7 @@ install -p -D -m 644 %{module}/enabled/_1722_dns_reversedns_panel.py %{buildroot
 %if 0%{?with_doc}
 %files -n python-%{library}-doc
 %license LICENSE
-%doc build/sphinx/html README.rst
+%doc doc/build/html README.rst
 %endif
 
 
