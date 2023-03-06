@@ -37,7 +37,7 @@ BuildRequires:  python3-setuptools
 BuildRequires:  git-core
 BuildRequires:  openstack-macros
 
-Requires:   python3-pbr
+Requires:   python3-pbr >= 2.0.0
 Requires:   openstack-dashboard >= 1:17.1.0
 
 %description
