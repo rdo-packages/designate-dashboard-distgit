@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d639d8bc_80b7f642",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-07-27T15:38:36Z",
+      "side": 1,
+      "message": "Maybe we should not put -e %{default_toxenv} and rely on requirements.txt and \"-t -e docs\" only in order to not pull the tests BR that we don\u0027t use (no %check)",
+      "revId": "49694eb3732582a96f26cc34acefcc63169a7d15",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b694ba96_ecc7035c",
+        "filename": "openstack-designate-ui.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-07-27T15:38:36Z",
+      "side": 1,
+      "message": "I think this line can be removed",
+      "range": {
+        "startLine": 97,
+        "startChar": 0,
+        "endLine": 97,
+        "endChar": 11
+      },
+      "revId": "49694eb3732582a96f26cc34acefcc63169a7d15",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
