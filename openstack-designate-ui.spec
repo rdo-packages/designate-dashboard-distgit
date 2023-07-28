@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x01527a34f0d0080f8a5db8d6eb6c5df21b4b6363
+%global sources_gpg_sign 0x815AFEC729392386480E076DCC0DFE2D21C023C9
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 %global library designate-ui
@@ -11,7 +11,7 @@
 OpenStack Designate Horizon plugin
 
 Name:       openstack-%{library}
-Version:    14.0.0
+Version:    14.0.1
 Release:    1%{?dist}
 Summary:    OpenStack Designate UI Horizon plugin
 License:    ASL 2.0
@@ -105,6 +105,9 @@ install -p -D -m 644 %{module}/enabled/_1722_dns_reversedns_panel.py %{buildroot
 
 
 %changelog
+* Fri Jul 28 2023 RDO <dev@lists.rdoproject.org> 14.0.1-1
+- Update to 14.0.1
+
 * Wed Mar 30 2022 RDO <dev@lists.rdoproject.org> 14.0.0-1
 - Update to 14.0.0
 
