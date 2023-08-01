@@ -39,6 +39,30 @@
       },
       "revId": "49694eb3732582a96f26cc34acefcc63169a7d15",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4f684a51_56fa18aa",
+        "filename": "openstack-designate-ui.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-08-01T14:40:20Z",
+      "side": 1,
+      "message": "Actually we need it",
+      "parentUuid": "b694ba96_ecc7035c",
+      "range": {
+        "startLine": 97,
+        "startChar": 0,
+        "endLine": 97,
+        "endChar": 11
+      },
+      "revId": "49694eb3732582a96f26cc34acefcc63169a7d15",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
