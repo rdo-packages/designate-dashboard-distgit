@@ -12,7 +12,7 @@ OpenStack Designate Horizon plugin
 
 Name:       openstack-%{library}
 Version:    16.0.0
-Release:    1%{?dist}
+Release:    2%{?dist}
 Summary:    OpenStack Designate UI Horizon plugin
 License:    ASL 2.0
 URL:        http://launchpad.net/%{upstream_name}/
@@ -41,6 +41,7 @@ BuildRequires:  openstack-macros
 
 Requires:   python3-pbr >= 2.0.0
 Requires:   openstack-dashboard >= 1:17.1.0
+Requires:   python3-openstacksdk >= 0.53.0
 
 %description
 %{common_desc}
@@ -103,6 +104,9 @@ install -p -D -m 644 %{module}/enabled/_1722_dns_reversedns_panel.py %{buildroot
 
 
 %changelog
+* Thu Apr 11 2024 Michael Johnson <johnsomor@gmail.com> 16.0.0-2
+- Add requirement for python3-openstacksdk
+
 * Fri Mar 31 2023 RDO <dev@lists.rdoproject.org> 16.0.0-1
 - Update to 16.0.0
 
