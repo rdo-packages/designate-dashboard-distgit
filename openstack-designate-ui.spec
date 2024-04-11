@@ -42,6 +42,7 @@ BuildRequires:  openstack-macros
 Requires:   python3-pbr
 Requires:   python3-designateclient >= 2.7.0
 Requires:   openstack-dashboard >= 1:17.1.0
+Requires:   python3-openstacksdk >= 0.53.0
 Requires:   python3-oslo-log >= 3.36.0
 
 %description
@@ -105,6 +106,9 @@ install -p -D -m 644 %{module}/enabled/_1722_dns_reversedns_panel.py %{buildroot
 
 
 %changelog
+* Thu Apr 11 2024 Michael Johnson <johnsomor@gmail.com> 12.0.0-3
+- Add requirement for python3-openstacksdk
+
 * Wed Nov 10 2021 Tobias Urdin <tobias.urdin@binero.com> 12.0.0-2
 - Fix Horizon enabled files permission
 
