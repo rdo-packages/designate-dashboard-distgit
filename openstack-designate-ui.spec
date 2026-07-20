@@ -19,7 +19,7 @@
 OpenStack Designate Horizon plugin
 
 Name:       openstack-%{library}
-Version:    20.0.0
+Version:    20.0.1
 Release:    1%{?dist}
 Summary:    OpenStack Designate UI Horizon plugin
 License:    Apache-2.0
@@ -126,6 +126,9 @@ install -p -D -m 644 %{module}/enabled/_1722_dns_reversedns_panel.py %{buildroot
 
 
 %changelog
+* Mon Jul 20 2026 RDO <dev@lists.rdoproject.org> 20.0.1-1
+- Update to 20.0.1
+
 * Wed Apr 02 2025 RDO <dev@lists.rdoproject.org> 20.0.0-1
 - Update to 20.0.0
 
